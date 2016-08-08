@@ -5,8 +5,144 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <main class="container">
+      <nav class="main-navigation">
+        <ul>
+          <li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="#">Фото и видео</a>
+          </li>
+          <li>
+            <a href="#">
+            <img src="#" alt="Логотип Седона">
+            </a>
+          </li>
+          <li>
+            <a href="#">Карта штата</a>
+          </li>
+          <li>
+            <a href="#">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    <header class="main-header">
+      <img src="http://placehold.it/1200x508" alt="Седона фото" width="1200" height="508">
+      <h1><img src="http://placehold.it/450x350" alt="Добро пожаловать!" width="450" height="350">Седона</h1>
+    </header>
+    <section>
+      <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+    </section>
+    <section class="sights">
+      <div>
+        <h3>Настоящий городок!</h3>
+        <span>— № 1 —</span>
+        <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+        <img src="http://placehold.it/800x256" alt="Фото дома в Седоне" width="800" height="256">
+      </div>
+    </section>
+    <section class="features">
+      <ul>
+        <li>
+          <img src="http://placehold.it/75x72" alt="Дом" width="75" height="72">
+          <b>Жилье</b>
+          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </li>
+        <li>
+          <img src="http://placehold.it/75x72" alt="Бургер" width="75" height="72">
+          <b>Еда</b>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </li>
+        <li>
+          <img src="http://placehold.it/75x72" alt="Подарок" width="75" height="72">
+          <b>Сувениры</b>
+          <p>Не только китайского, но и местного производства!</p>
+        </li>
+      </ul>
+    </section>
+    <section class="sights">
+      <div>
+        <img src="http://placehold.it/800x256" alt="Горы" width="800" height="256">
+        <h3>Там есть мост дьявола!</h3>
+        <span>— № 2 —</span>
+        <p>Да, по нему можно пройти! Если конечно вы осмелитесь!</p>
+      </div>
+    </section>
+    <section class="features">
+      <ul>
+        <li>
+          <h3>Небольшая площадь</h3>
+          <span>— № 3 —</span>
+          <p>Все достопримечательности находятся очень близко</p>
+        </li>
+        <li>
+          <h3>Красивя дорога</h3>
+          <span>— № 4 —</span>
+          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </li>
+        <li>
+          <h3>Мало туристов</h3>
+          <span>— № 5 —</span>
+          <p>Большинство едет в Гранд Каньон и толпится там</p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h4>Заинтересовались?</h4>
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <a class="btn" href="#">Поиск гостиницы в Седоне</a>
+    </section>
+    <section>
+      <form method="post">
+        <table>
+          <tr>
+            <td>
+              <label for="check-in">Дата заезда</label>
+              <select name="check-in">
+              <option value="24-04-2016">24 апреля 2016</option>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="check-out">Дата выезда</label>
+              <select name="check-out">
+              <option value="4-07-2016">4 июля 2016</option>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="adults">Взрослые</label>
+              <select name="adults">
+              <option value="2">2</option>
+            </td>
+            <td>
+              <label for="kids">Дети</label>
+              <select name="kids">
+              <option value="0">0</option>
+            </td>
+          </tr>
+        </table>
+        <input type="submit" value="Найти">
+      </form>
+      <img src="http://placehold.it/1200x593" alt="Карта" width="1200" height="593">
+    </section>
+    <footer>
+      <div>
+        #visitsedona
+      </div>
+      <section class="footer-social">
+        <a class="social-btn social-btn-tw" href="#">Твиттер</a>
+        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-yout" href="#">Ютуб</a>
+      </section>
+      <section class="footer-copyright">
+        <p>Website by</p>
+        <a class="btn" href="https://htmlacademy.ru">HTML Academy
+        <img src="#" alt="HTML Academy"></a>
+      </section>
+    </footer>
+    </main>
   </body>
 </html>
