@@ -28,51 +28,65 @@
         </ul>
       </nav>
       <section class="search">
-        <form class="find-house" action="#" method="get">
-          <b>Инфраструктура</b>
-          <label>
-            <input name="infrastructure1" type="checkbox">Бассейн
-          </label>
-          <label>
-            <input name="infrastructure2" type="checkbox">Парковка
-          </label>
-          <label>
-            <input name="infrastructure3" type="checkbox">Wi-fi
-          </label>
-          <b>Тип жилья</b>
-          <label>
-            <input name="house-type1" type="checkbox">Гостиница
-          </label>
-          <label>
-            <input name="house-type2" type="checkbox">Мотель
-          </label>
-          <label>
-            <input name="house-type3" type="checkbox">Апартаменты
-          </label>
-          /*Стоимость в сутки*/
-        </form>
+        <div>
+          <form class="find-house" action="#" method="get">
+            <!--Разобрать зачем нужны оборачивающие дивы в каталоге-->
+            <div>
+              <b>Инфраструктура</b>
+              <label>
+                <input name="infrastructure1" type="checkbox">Бассейн
+              </label>
+              <label>
+                <input name="infrastructure2" type="checkbox">Парковка
+              </label>
+              <label>
+                <input name="infrastructure3" type="checkbox">Wi-fi
+              </label>
+            </div>
+            <div>
+              <b>Тип жилья</b>
+              <label>
+                <input name="house-type1" type="checkbox">Гостиница
+              </label>
+              <label>
+                <input name="house-type2" type="checkbox">Мотель
+              </label>
+              <label>
+                <input name="house-type3" type="checkbox">Апартаменты
+              </label>
+            </div>
+          <!--Стоимость в сутки-->
+          </form>
+        </div>
       </section>
       <section class="catalog">
-        <b>Найдено</b>
-        <span>Сортировка:</span>
-        <a class="sort" href="#">По цене</a>
-        <a class="sort" href="#">По типу</a>
-        <a class="sort" href="#">По рейтингу</a>
-        <a href="#"><img src="http://placehold.it/10x10" alt="По возрастанию" width="10" height="10"></a>
-        <a href="#"><img src="http://placehold.it/10x10" alt="По убыванию" width="10" height="10"></a>
+        <!--Разобрать зачем нужны оборачивающие дивы в каталоге-->
+        <div>
+          <div>
+            <b>Найдено: 3</b>
+          </div>
+          <div>
+            <span>Сортировка:</span>
+            <a class="sort sort-active" href="#">По цене</a>
+            <a class="sort" href="#">По типу</a>
+            <a class="sort" href="#">По рейтингу</a>
+          </div>
+          <div>
+            <a href="#"><img src="http://placehold.it/10x10" alt="По возрастанию" width="10" height="10"></a>
+            <a href="#"><img src="http://placehold.it/10x10" alt="По убыванию" width="10" height="10"></a>
+          </div>
+        </div>
         <ul>
           <li>
             <img src="http://placehold.it/135x90" alt="Amara Resort" width="135" height="90">
-            <div>
+            <div class="catalog-info">
               <h2>Amara Resort & Spa</h2>
-              <div>
                 <span>Гостиница</span>
                 <span>От 3500 р.</span>
-              </div>
               <a class="more" href="#">Подробнее</a>
               <a class="book" href="#">Забронировать</a>
             </div>
-            <div>
+            <div class="catalog-rating">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
@@ -82,16 +96,14 @@
           </li>
           <li>
             <img src="http://placehold.it/135x90" alt="Desert Qual Inn" width="135" height="90">
-            <div>
+            <div class="catalog-info">
               <h2>Desert Qual Inn</h2>
-              <div>
                 <span>Мотель</span>
                 <span>От 2000 р.</span>
-              </div>
               <a class="more" href="#">Подробнее</a>
               <a class="book" href="#">Забронировать</a>
             </div>
-            <div>
+            <div class="catalog-rating">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <span>Рейтинг 8,9</span>
@@ -99,16 +111,14 @@
           </li>
           <li>
             <img src="http://placehold.it/135x90" alt="Villas at Poco Diablo" width="135" height="90">
-            <div>
+            <div class="catalog-info">
               <h2>Villas at Poco Diablo</h2>
-              <div>
                 <span>Апартаменты</span>
                 <span>От 4000 р.</span>
-              </div>
               <a class="more" href="#">Подробнее</a>
               <a class="book" href="#">Забронировать</a>
             </div>
-            <div>
+            <div class="catalog-rating">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
@@ -117,9 +127,9 @@
           </li>
         </ul>
       </section>
-    </main>
     <footer>
-      <div>
+      <!--Здесь не очень поняла. Почему нужен класс footer-logo?-->
+      <div class="footer-logo">
         #visitsedona
       </div>
       <section class="footer-social">
