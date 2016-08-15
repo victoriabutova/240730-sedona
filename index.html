@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <main class="container">
-      <nav class="main-navigation">
+      <nav class="main__navigation">
         <ul>
           <li>
             <a href="#">Информация</a>
@@ -16,7 +17,7 @@
           </li>
           <li>
             <a href="#">
-            <img src="#" alt="Логотип Седона">
+            <img src="img/logo.png" alt="Логотип Седона">
             </a>
           </li>
           <li>
@@ -27,9 +28,9 @@
           </li>
         </ul>
       </nav>
-    <header class="main-header">
-      <img src="http://placehold.it/1200x508" alt="Седона фото" width="1200" height="508">
-      <h1><img src="http://placehold.it/450x350" alt="Добро пожаловать!" width="450" height="350">Седона</h1>
+    <header class="main__header">
+      <img src="img/background.jpg" alt="Седона фото" width="1200" height="508">
+      <h1><img src="img/welcome.png" alt="Добро пожаловать!" width="450" height="350">Седона</h1>
     </header>
     <section class="description">
       <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
@@ -41,29 +42,29 @@
         <span>— № 1 —</span>
         <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
       </div>
-      <img src="http://placehold.it/800x256" alt="Фото дома в Седоне" width="800" height="256">
+      <img src="img/city.jpg" alt="Фото дома в Седоне" width="800" height="256">
     </section>
     <section class="features">
       <ul>
         <li>
-          <img src="http://placehold.it/75x72" alt="Дом" width="75" height="72">
+          <img src="img/icon__house.png" alt="Дом" width="75" height="72">
           <b>Жилье</b>
           <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li>
-          <img src="http://placehold.it/75x72" alt="Бургер" width="75" height="72">
+          <img src="img/icon__food.png" alt="Бургер" width="75" height="72">
           <b>Еда</b>
           <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
         <li>
-          <img src="http://placehold.it/75x72" alt="Подарок" width="75" height="72">
+          <img src="img/icon__gift.png" alt="Подарок" width="75" height="72">
           <b>Сувениры</b>
           <p>Не только китайского, но и местного производства!</p>
         </li>
       </ul>
     </section>
     <section class="sights">
-      <img src="http://placehold.it/800x256" alt="Горы" width="800" height="256">
+      <img src="img/bridge.jpg" alt="Горы" width="800" height="256">
       <div>
         <h3>Там есть мост дьявола!</h3>
         <span>— № 2 —</span>
@@ -99,15 +100,15 @@
         <table>
           <tr>
             <td>
-              <label for="check-in">Дата заезда</label>
-              <input name="check-in">
+              <label for="check__in">Дата заезда</label>
+              <input name="check__in">
               <option value="24-04-2016">24 апреля 2016</option>
             </td>
           </tr>
           <tr>
             <td>
-              <label for="check-out">Дата выезда</label>
-              <input name="check-out">
+              <label for="check__out">Дата выезда</label>
+              <input name="check__out">
               <option value="4-07-2016">4 июля 2016</option>
             </td>
           </tr>
@@ -126,20 +127,21 @@
         </table>
         <input type="submit" value="Найти">
       </form>
+      <!--Интерактивная карта-->
       <img src="http://placehold.it/1200x593" alt="Карта" width="1200" height="593">
       <footer>
-        <div class="footer-logo">
-          #visitsedona
+        <div class="footer__logo">
+          <a href="https://www.instagram.com/visitsedona/">#visitsedona</a>
         </div>
-        <section class="footer-social">
+        <section class="footer__social">
           <a class="social-btn social-btn-tw" href="#">Твиттер</a>
           <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
           <a class="social-btn social-btn-yout" href="#">Ютуб</a>
         </section>
-        <section class="footer-copyright">
+        <section class="footer__copyright">
           <p>Website by</p>
-          <a class="btn" href="https://htmlacademy.ru">HTML Academy
-          <img src="#" alt="HTML Academy"></a>
+          <a class="btn" href="https://htmlacademy.ru">
+          <img src="img/html__academy.png" alt="HTML Academy"></a>
         </section>
       </footer>
     </section>
