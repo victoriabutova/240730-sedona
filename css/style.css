@@ -2,15 +2,22 @@ p,
 span {
   font-size: 14px;
   line-height: 21px;
+  text-align: center;
   color: #333333;
   font-weight: normal;
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
+span,
+b {
+  display: block;
+}
+
 h2 {
   font-size: 21px;
   line-height: 26px;
+  text-align: center;
   color: #000000;
   font-weight: bold;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -21,8 +28,292 @@ h3,
 b {
   font-size: 21px;
   line-height: 21px;
+  text-align: center;
   color: #000000;
   font-weight: bold;
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
+}
+
+h4 {
+  font-size: 30px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main__navigation > ul > li > a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.text__white {
+  color: #ffffff;
+}
+
+.h1__index {
+  display: none;
+}
+
+.footer__hashtag > a {
+  text-decoration: none;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Разметка сетки */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main__navigation {
+  width: 1200px;
+  min-height: 100px;
+}
+
+.nav__column1,
+.nav__column2 {
+  float: left;
+  width: 230px;
+  margin-right: 10px;
+  padding-top: 20px;
+}
+
+
+.nav__column3 {
+  float: left;
+  width: 230px;
+  margin-right: 10px;
+}
+
+.nav__column4 {
+  float: left;
+  width: 230px;
+  padding-top: 20px;
+}
+
+/* Не понимаю, почему выпадает последняя колонка?
+Она по всем расчетам должна влезать: 230px x 5 = 1150px
+плюс три margin-right по 10px. Остается еще 20px */
+
+.nav__column5 {
+  float: right;
+  width: 230px;
+  padding-top: 20px;
+}
+
+.main__header {
+  width: 1200px;
+  height: 508px;
+  background: url("../img/background.jpg") no-repeat;
+  padding-top: 76px;
+  margin-bottom: 60px;
+}
+
+.header__text {
+  width: 458px;
+  height: 350px;
+  background: url("../img/welcome.png") no-repeat;
+  margin: auto;
+
+}
+
+.white__shape {
+  width: 1200px;
+  height: 57px;
+  background: url("../img/white__shape.png") no-repeat;
+  margin: auto;
+  margin-top: 101px;
+
+}
+
+.description {
+  width: 576px;
+  margin: 0 auto;
+  margin-bottom: 56px;
+}
+
+.sights__block {
+  margin-bottom: 56px;
+}
+
+/* Задала padding как в фотошопе, 55px. Но в браузере
+почему-то отображается 147px. Такая же проблема ниже,
+в тегах features4, features5, features6 */
+
+.sights1 {
+  float:left;
+  width: 400px;
+  background-color: #81b3d2;
+  padding-top: 55px;
+  min-height: 201px;
+}
+
+.sight1__image {
+  float: right;
+  width: 800px;
+}
+
+.features1 {
+  float: left;
+  width: 380px;
+  margin-right: 20px;
+  margin-bottom: 88px;
+}
+
+.features2 {
+  float: left;
+  width: 380px;
+}
+
+.features3 {
+  float: right;
+  width: 380px;
+}
+
+.sights__block2 {
+  margin-bottom: 0;
+}
+
+.sight2__image {
+  float: left;
+  width: 800px;
+}
+
+.sights2 {
+  float: right;
+  width: 400px;
+  background-color: #81b3d2;
+  padding-top: 55px;
+  min-height: 201px;
+}
+
+.features__block2 {
+  background-color: #eeeeee;
+  margin-bottom: 55px;
+  min-height: 209px;
+}
+
+.features4 {
+  float: left;
+  width: 380px;
+  margin-right: 20px;
+  padding-top: 49px;
+}
+
+.features5 {
+  float: left;
+  width: 380px;
+  padding-top: 49px;
+}
+
+.features6 {
+  float: right;
+  width: 380px;
+  padding-top: 49px;
+}
+
+.order__form {
+  width: 568px;
+  height: 395px;
+  margin: 0 auto;
+}
+
+.footer__hashtag {
+  float: left;
+  width: 380px;
+  margin-right: 20px;
+}
+
+.footer__social {
+  float: left;
+  width: 380px;
+}
+
+/* Выпадает логотип. Уже делала эту колонку очень
+широкой, лого все равно выпадает */
+
+.footer__copywright {
+  float: right;
+  width: 380px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Разметка сетки для страницы каталога*/
+
+.infrastructure {
+  float: left;
+  width: 254px;
+}
+
+.house__type {
+  float: left;
+  width: 254px;
+}
+
+.house__type {
+  float: left;
+  width: 400px;
+}
+
+.result__found {
+  float: left;
+  width: 150px;
+}
+
+.result__sort {
+  float: left;
+  width: 600px;
+}
+
+.result__sort2 {
+  float: right;
+  width: 100px;
+}
+
+.hotel__image {
+  float: left;
+  width: 207px;
+  height: 150px;
+}
+
+.hotel__info {
+  float: left;
+  width: 600px;
+  height: 150px;
+}
+
+.hotel__rating {
+  float: right;
+  width: 240px;
+  height: 150px;
+}
+
+.hotel__border {
+  border-bottom: 1px solid #e5e5e5;
 }

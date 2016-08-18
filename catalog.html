@@ -7,33 +7,32 @@
   </head>
   <body>
     <main class="container">
-      <nav class="main__navigation">
+      <nav class="main__navigation clearfix">
         <ul>
-          <li>
+          <li class="nav__column1">
             <a href="#">Информация</a>
           </li>
-          <li>
+          <li class="nav__column2">
             <a href="#">Фото и видео</a>
           </li>
-          <li>
+          <li class="nav__column3">
             <a href="#">
             <img src="img/logo.png" alt="Логотип Седона">
             </a>
           </li>
-          <li>
+          <li class="nav__column4">
             <a href="#">Карта штата</a>
           </li>
-          <li>
+          <li class="nav__column5">
             <a href="#">Гостиницы</a>
           </li>
         </ul>
       </nav>
       <section class="search">
-        <div>
+        <div class="clearfix">
           <img src="img/hotel__background.jpg" width="1200" height="215">
           <form class="find__house" action="#" method="get">
-            <!--Разобрать зачем нужны оборачивающие дивы в каталоге-->
-            <div>
+            <div class="infrastructure">
               <b>Инфраструктура</b>
               <label>
                 <input name="infrastructure1" type="checkbox">Бассейн
@@ -45,7 +44,7 @@
                 <input name="infrastructure3" type="checkbox">Wi-fi
               </label>
             </div>
-            <div>
+            <div class="house__type">
               <b>Тип жилья</b>
               <label>
                 <input name="house__type1" type="checkbox">Гостиница
@@ -57,38 +56,41 @@
                 <input name="house__type3" type="checkbox">Апартаменты
               </label>
             </div>
-          <!--Стоимость в сутки-->
+            <div class="price__day">
+              <b>Стоимость в сутки</b>
+            </div>
           </form>
         </div>
       </section>
-      <section class="catalog">
-        <!--Разобрать зачем нужны оборачивающие дивы в каталоге-->
+      <section class="catalog clearfix">
         <div>
-          <div>
+          <div class="result__found">
             <b>Найдено: 3</b>
           </div>
-          <div>
+          <div class="result__sort">
             <span>Сортировка:</span>
             <a class="sort sort__active" href="#">По цене</a>
             <a class="sort" href="#">По типу</a>
             <a class="sort" href="#">По рейтингу</a>
           </div>
-          <div>
+          <div class="result__sort2">
             <a href="#"><img src="http://placehold.it/10x10" alt="По возрастанию" width="10" height="10"></a>
             <a href="#"><img src="http://placehold.it/10x10" alt="По убыванию" width="10" height="10"></a>
           </div>
         </div>
         <ul>
-          <li>
-            <img src="img/hotel__amara.jpg" alt="Amara Resort" width="135" height="90">
-            <div class="catalog__info">
+          <li class="hotel__border clearfix">
+            <div class="hotel__image">
+              <img src="img/hotel__amara.jpg" alt="Amara Resort" width="135" height="90">
+            </div>
+            <div class="hotel__info">
               <h2>Amara Resort & Spa</h2>
                 <span>Гостиница</span>
                 <span>От 3500 р.</span>
               <a class="more" href="#">Подробнее</a>
               <a class="book" href="#">Забронировать</a>
             </div>
-            <div class="catalog__rating">
+            <div class="hotel__rating">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
@@ -96,31 +98,35 @@
               <span>Рейтинг 8,5</span>
             </div>
           </li>
-          <li>
-            <img src="img/hotel__desert.jpg" alt="Desert Qual Inn" width="135" height="90">
-            <div class="catalog__info">
+          <li class="hotel__border clearfix">
+            <div class="hotel__image">
+              <img src="img/hotel__desert.jpg" alt="Desert Qual Inn" width="135" height="90">
+            </div>
+            <div class="hotel__info">
               <h2>Desert Qual Inn</h2>
                 <span>Мотель</span>
                 <span>От 2000 р.</span>
               <a class="more" href="#">Подробнее</a>
               <a class="book" href="#">Забронировать</a>
             </div>
-            <div class="catalog__rating">
+            <div class="hotel__rating">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <span>Рейтинг 8,9</span>
             </div>
           </li>
-          <li>
-            <img src="img/hotel__villas.jpg" alt="Villas at Poco Diablo" width="135" height="90">
-            <div class="catalog__info">
+          <li class="hotel__border clearfix">
+            <div class="hotel__image">
+              <img src="img/hotel__villas.jpg" alt="Villas at Poco Diablo" width="135" height="90">
+            </div>
+            <div class="hotel__info">
               <h2>Villas at Poco Diablo</h2>
                 <span>Апартаменты</span>
                 <span>От 4000 р.</span>
               <a class="more" href="#">Подробнее</a>
               <a class="book" href="#">Забронировать</a>
             </div>
-            <div class="catalog__rating">
+            <div class="hotel__rating">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
               <img src="http://placehold.it/15x15" alt="Звездочка" width="15" height="15">
@@ -129,21 +135,21 @@
           </li>
         </ul>
       </section>
-    <footer>
-      <div class="footer__logo">
-        <a href="https://www.instagram.com/visitsedona/">#visitsedona</a>
-      </div>
-      <section class="footer__social">
-        <a class="social__btn social__btn__tw" href="#">Твиттер</a>
-        <a class="social__btn social__btn__fb" href="#">Фейсбук</a>
-        <a class="social__btn social__btn__yout" href="#">Ютуб</a>
-      </section>
-      <section class="footer-copyright">
-        <p>Website by</p>
-        <a class="btn" href="https://htmlacademy.ru">
-        <img src="img/html__academy.png" alt="HTML Academy"></a>
-      </section>
-    </footer>
+      <footer class="main__footer clearfix">
+        <div class="footer__hashtag">
+          <a href="https://www.instagram.com/visitsedona/">#visitsedona</a>
+        </div>
+        <section class="footer__social">
+          <a class="social-btn social-btn-tw" href="#">Твиттер</a>
+          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn social-btn-yout" href="#">Ютуб</a>
+        </section>
+        <section class="footer__copyright">
+          <p>Website by</p>
+          <a class="btn" href="https://htmlacademy.ru">
+          <img src="img/html__academy.png" alt="HTML Academy" width="113" height="39"></a>
+        </section>
+      </footer>
     </main>
   </body>
 </html>
