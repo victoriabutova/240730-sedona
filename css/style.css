@@ -120,8 +120,7 @@ ul {
   margin-left: auto;
 }
 
-/* Кнопки в каталоге
-test test */
+/* Кнопки в каталоге */
 
 .more,
 .book {
@@ -211,31 +210,35 @@ test test */
 }
 
 .sights__block {
+  margin: 0;
   margin-bottom: 56px;
+  padding: 0;
 }
-
-/* Задала padding как в фотошопе, 55px. Но в браузере
-почему-то отображается 147px. Такая же проблема ниже,
-в тегах features4, features5, features6 */
 
 .sights1 {
   float:left;
   width: 400px;
   background-color: #81b3d2;
-  padding-top: 55px;
-  min-height: 201px;
+  padding-top: 34px;
+  min-height: 222px;
 }
 
 .sight1__image {
   float: right;
   width: 800px;
+  line-height: 0;
+}
+
+.features > ul {
+  margin: 0;
+  padding: 0;
 }
 
 .features1 {
   float: left;
   width: 380px;
   margin-right: 20px;
-  margin-bottom: 88px;
+  margin-bottom: 64px;
 }
 
 .features2 {
@@ -249,45 +252,52 @@ test test */
 }
 
 .sights__block2 {
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .sights2__image {
   float: left;
   width: 800px;
+  line-height: 0;
 }
 
 .sights2 {
   float: right;
   width: 400px;
   background-color: #81b3d2;
-  padding-top: 55px;
-  min-height: 201px;
+  padding-top: 34px;
+  min-height: 222px;
 }
 
 .features__block2 {
   background-color: #eeeeee;
   margin-bottom: 55px;
-  min-height: 209px;
+  min-height: 220px;
+}
+
+.features__block2 > ul {
+  margin: 0;
+  padding: 0;
 }
 
 .features4 {
   float: left;
   width: 380px;
   margin-right: 20px;
-  padding-top: 49px;
+  padding-top: 28px;
 }
 
 .features5 {
   float: left;
   width: 380px;
-  padding-top: 49px;
+  padding-top: 28px;
 }
 
 .features6 {
   float: right;
   width: 380px;
-  padding-top: 49px;
+  padding-top: 28px;
 }
 
 .order__form {
@@ -319,9 +329,8 @@ test test */
   text-align: center;
 }
 
-/* Выпадает логотип. Уже что только не делала с этой колонкой */
 
-.footer__copywright {
+.footer__copyright {
   display: inline-block;
   width: 33%;
   text-align: center;
@@ -354,7 +363,7 @@ test test */
   float: left;
   width: 150px;
   padding-top: 30px;
-  min-height: 55px;
+  min-height: 29px;
 }
 
 .result__sort {
