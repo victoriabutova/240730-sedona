@@ -12,21 +12,21 @@
       <nav class="main__navigation clearfix">
         <ul>
           <li class="column1">
-            <a href="#">Информация</a>
+            <a class="navigation" href="#">Информация</a>
           </li>
           <li class="column2">
-            <a href="#">Фото и видео</a>
+            <a class="navigation" href="#">Фото и видео</a>
           </li>
           <li>
-            <a  class="logo">
+            <a class="logo">
             <img src="img/logo.png" alt="Логотип Седона">
             </a>
           </li>
           <li class="column3">
-            <a href="#">Карта штата</a>
+            <a class="navigation" href="#">Карта штата</a>
           </li>
           <li class="column4">
-            <a href="#">Гостиницы</a>
+            <a class="navigation" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -104,29 +104,39 @@
         <p>Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="search" href="#">Поиск гостиницы в Седоне</a>
         <div class="modal__content">
-          <form class="search__form" action="/echo" method="post" oninput="dayscountval.value=dayscount.value">
+          <form class="search__form" action="#" method="post">
             <fieldset>
               <div>
-                <label>Дата заезда:
-                  <input class="icon__calendar" type="date" name="check__in" value="">
-                </label>
+                <label for="check__in" class="form__left">Дата заезда:</label>
+                <div class="input__container">
+                  <input type="text" id="check__in"  class="check__in" value="24 апреля 2016">
+                  <button class="icon__calendar" type="button"></button>
+                </div>
               </div>
               <div>
-                <label>Дата выезда:
-                  <input class="icon__calendar" type="date" name="check__out" value="">
-                </label>
+                <label for="check__out" class="form__left">Дата выезда:</label>
+                <div class="input__container">
+                  <input type="text" id="check__out" class="check__out" value="4 июля 2016">
+                  <button class="icon__calendar" type="button"></button>
+                </div>
               </div>
-              <div>
-                <label>Взрослые:
-                  <input name="adults">
-                  <option value="2">2</option>
-                </label>
-              </div>
-              <div>
-                <label>Дети:
-                  <input name="kids">
-                  <option value="0">0</option>
-                </label>
+              <div class="clearfix">
+                <div class="adults__kids__block1 clearfix">
+                  <label for="adults" class="adults__kids__left1">Взрослые:</label>
+                  <div class="adults__kids__btn">
+                    <input class="btn__minus" type="button" value="-">
+                    <input class="number" id="adults" type="text" value="2">
+                    <input class="btn__plus" type="button" value="+">
+                  </div>
+                </div>
+                <div class="adults__kids__block2 clearfix">
+                  <label for="kids" class="adults__kids__left2">Дети:</label>
+                  <div class="adults__kids__btn">
+                    <input class="btn__mp btn__minus" type="button" value="-">
+                    <input class="number" id="kids" type="text" value="0">
+                    <input class="btn__plus" type="button" value="+">
+                  </div>
+                </div>
               </div>
             </fieldset>
               <input class="find" type="submit" value="Найти">
@@ -153,10 +163,9 @@
                 </li>
               </ul>
             </section>
-            <section class="footer__copyright">
+            <section class="footer__copyright clearfix">
               <p>Website by</p>
-              <a href="https://htmlacademy.ru">
-                <img src="img/html__academy.png" alt="HTML Academy" width="113" height="39"></a>
+              <a class="copyright" href="https://htmlacademy.ru">HTML Academy</a>
             </section>
           </footer>
         </div>

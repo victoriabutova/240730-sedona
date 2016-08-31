@@ -37,7 +37,6 @@ h4 {
   text-align: center;
 }
 
-.main__navigation ul,
 .features ul,
 .features__block2 ul {
   list-style-type: none;
@@ -64,14 +63,6 @@ h4 {
   text-align: center;
 }
 
-.main__navigation a {
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 26px;
-  text-align: center;
-  color: #000000;
-}
-
 .text__white {
   color: #ffffff;
 }
@@ -88,46 +79,41 @@ h4 {
   color: #000000;
 }
 
-/* Разметка сетки */
-
 .container {
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main__navigation {
   min-height: 56px;
   font-size: 0px;
   margin: 0;
-  padding-left: 6%;
-  padding-right: 6%;
 }
 
 .main__navigation ul {
+  list-style-type: none;
   margin: 0;
+  padding: 0;
+  vertical-align: top;
   padding-top:14px;
   line-height: 0;
-
 }
 
 .main__navigation ul li {
   display: inline-block;
   vertical-align: top;;
+  text-align: center;
   width: 20%;
   min-height: 10px;
   margin: 0;
   padding: 0;
 }
 
-.column1,
-.column2 {
-  text-align: left;
-}
-
-.column3,
-.column4 {
-  text-align: right;
+.main__navigation li:last-child  {
+	padding-left: 15px;
+	box-sizing: border-box;
 }
 
 .logo {
@@ -141,19 +127,32 @@ h4 {
   top: 0;
 }
 
-.main__navigation a {
+.navigation {
   text-align: center;
   text-decoration: none;
   color: #000000;
+  font-size: 14px;
   line-height: 26px;
 }
 
-.main__navigation a:hover {
+.navigation:hover {
   color: #81b3d2;
 }
 
-.main__navigation a:active {
+.navigation:active {
   color: #cacaca;
+}
+
+.navigation__active {
+  color: #766357;
+}
+
+.navigation__active:hover {
+  color: #604e43;
+}
+
+.navigation__active:active {
+  color: #dbd8d5;
 }
 
 .main__header {
@@ -338,6 +337,7 @@ h4 {
 }
 
 .interest a {
+  position: relative;
   display: block;
   font-size: 21px;
   line-height: 26px;
@@ -362,26 +362,26 @@ h4 {
 }
 
 .modal__content {
-  width: 493px;
-  padding: 36px 30px 0 45px;
+  width: 480px;
+  padding: 50px 45px 0 45px;
   position: absolute;
   z-index: 20;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 50%;
   left: 0;
   right: 0;
-  min-height: 295px;
+  min-height: 345px;
   margin: 0 auto;
   background-color: #ffffff;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
 
-.search__form input[type="date"] {
-  width: 300px;
+.input__container input[type="text"] {
+  float: right;
+  width: 290px;
   margin: 0;
   margin-left: 15px;
-  margin-bottom: 10px;
-  padding: 5px 15px;
+  margin-bottom: 30px;
+  padding: 6px 12px;
   padding-right: 40px;
   font-size: 14px;
   line-height: 26px;
@@ -393,19 +393,156 @@ h4 {
   outline: none;
 }
 
+.input__container input[type="text"]:hover {
+  background-color: #ebebeb;
+}
+
+.input__container input[type="text"]:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  padding: 4px 38px 4px 10px;
+}
+
 .modal__content fieldset {
   border: 0;
 }
 
-.search__form input.icon__calendar {
+.form__left {
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 35px;
+}
+
+.input__container {
+  position: relative;
+  float: right;
+}
+
+.icon__calendar {
+  position: absolute;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  background-position: 315px 0;
+  background-position: -10px -10px;
   opacity: 0.5;
+  width: 21px;
+  height: 22px;
+  display: inline-block;
+	vertical-align: top;
+	border: none;
+	outline: 0;
+	background-color: transparent;
+  top: 8px;
+	right: 10px;
+}
+
+.icon__calendar:hover {
+  opacity: 1;
+}
+.icon__calendar:active {
+  opacity: 1;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -51px -10px;
+}
+
+.adults__kids__block1 {
+  display: inline-block;
+  float: left;
+  vertical-align: middle;
+  margin-bottom: 38px;
+}
+
+.adults__kids__block2 {
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+}
+
+.adults__kids__left1 {
+  display: inline-block;
+  margin-right: 45px;
+  padding-top: 8px;
+}
+
+.adults__kids__left2 {
+  display: inline-block;
+  margin-right: 30px;
+  padding-top: 8px;
+}
+
+.adults__kids__btn {
+	font-size: 0;
+  display: inline-block;
+}
+
+.adults__kids__btn input {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+	font-size: 14px;
+	line-height: 26px;
+	vertical-align: middle;
+}
+
+.adults__kids__btn input[type=button] {
+	width: 38px;
+	height: 38px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	background-color: #f2f2f2;
+	font-size: 0;
+}
+
+.adults__kids__btn input[type=button]:hover {
+  background-color: #ebebeb;
+}
+
+.adults__kids__btn input[type=text]:hover {
+  background-color: #ebebeb;
+}
+
+.adults__kids__btn input[type="text"]:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  width: 22px;
+  height: 25px;
+}
+
+.adults__kids__btn .btn__minus,
+.adults__kids__btn .btn__plus {
+	background: url("../img/sprite.png") no-repeat top left;
+}
+
+.adults__kids__btn .btn__minus {
+	width: 12px;
+	height: 3px;
+	background-position: -86px -52px;
+}
+
+.adults__kids__btn .btn__plus {
+	width: 11px;
+	height: 11px;
+	background-position: -10px -98px;
+}
+
+.adults__kids__btn input[type=text] {
+	width: 32px;
+	padding: 4px;
+	height: 30px;
+	text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+  outline: none;
 }
 
 .find {
   display: block;
+  width: 460px;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
@@ -413,15 +550,26 @@ h4 {
   border: 0;
   text-decoration: none;
   max-width: 100%;
-  padding: 15px 135px;
+  padding: 17px 135px;
   text-align: center;
   background: #81b3d2;
   margin-right: auto;
   margin-left: auto;
 }
 
+.find:hover {
+  background: #669ec0;
+}
+
+.find:active {
+  background: #5496bd;
+  color: #94b9d2;
+}
+
 .map {
   position: relative;
+  font-size: 0;
+  line-height: 0;
 }
 
 .main__footer {
@@ -433,9 +581,9 @@ h4 {
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.8);
-  min-height: 90px;
+  min-height: 88px;
   padding: 0;
-  padding-top: 36px;
+  padding-top: 32px;
 }
 
 .footer__hashtag {
@@ -443,6 +591,7 @@ h4 {
   vertical-align: middle;
   width: 33%;
   text-align: center;
+  padding-left: 3px;
 }
 
 .footer__social {
@@ -450,25 +599,45 @@ h4 {
   vertical-align: middle;
   width: 33%;
   text-align: center;
+  padding-left: 4px;
 }
 
 .footer__copyright {
   display: inline-block;
   vertical-align: middle;
   width: 33%;
+  font-size: 14px;
+  line-height: 26px;
   text-align: center;
+  padding-left: 4px;
 }
 
 .footer__copyright p {
-  display: block;
+  display: inline-block;
   float: left;
   margin-left: 100px;
   margin-right: 8px;
+  vertical-align: middle;
 }
 
-.footer__copyright a {
-  display: block;
+.copyright {
+  width: 113px;
+  height: 39px;
+  background: url("../img/html__academy.png") no-repeat;
+  display: inline-block;
   float: left;
+  vertical-align: middle;
+  font-size: 0;
+  margin-top: 7px;
+}
+
+.copyright:hover {
+  background: url("../img/html__academy__blue.png") no-repeat;
+}
+
+.copyright:active{
+  background: url("../img/html__academy.png") no-repeat;
+  opacity: 0.3;
 }
 
 .footer__social ul {
@@ -532,8 +701,6 @@ h4 {
   clear: both;
 }
 
-/* Разметка сетки для страницы каталога*/
-
 .filter {
   background: #50626c url("../img/hotel__background.jpg") no-repeat;
   width: 1200px;
@@ -569,11 +736,167 @@ h4 {
   display: block;
   float: left;
   width: 254px;
+  margin-right: 72px;
 }
 
 .house__type {
   float: left;
   width: 400px;
+}
+
+.infrastructure input[type=checkbox],
+.house__type input[type=checkbox] {
+	display: none;
+}
+
+.infrastructure input[type=checkbox]+label,
+.house__type input[type=checkbox]+label {
+	display: block;
+	position: relative;
+	padding: 12px 0;
+	padding-left: 35px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.infrastructure input[type=checkbox]+label::before,
+.house__type input[type=checkbox]+label::before {
+	display: block;
+	position: absolute;
+	left: 0;
+	content: "";
+	width: 25px;
+	height: 25px;
+	background: url("../img/sprite.png") no-repeat -92px -10px;
+	cursor: pointer;
+}
+
+.infrastructure input[type=checkbox]:checked+label::before,
+.house__type input[type=checkbox]:checked+label::before {
+	display: block;
+	position: absolute;
+	left: 0;
+	content: "";
+	width: 25px;
+	height: 22px;
+	background: url("../img/sprite.png") no-repeat -10px -52px;
+}
+
+.price__day {
+  display: inline-block;
+  width: 330px;
+}
+
+.price__controls {
+  position: relative;
+  height: 32px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  margin-left:10px;
+  margin-top: -5px;
+}
+
+.price__controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+}
+
+.price__controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 21px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.price__controls .min__price,
+.price__controls .max__price {
+  width: 90px;
+  padding-left: 65px;
+  padding-top: 5px;
+}
+
+.price__controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.range__controls {
+  position: relative;
+  margin-bottom: 32px;
+  margin-left: 10px;
+}
+
+.range__controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range__controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range__toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range__toggle__min {
+  left: 0;
+}
+
+.range__toggle__max {
+  left: 80%;
+}
+
+.range__toggle:hover {
+  background: #1c4f80;
+}
+
+.btn__transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn__transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
 
 .result__found {
@@ -607,6 +930,15 @@ h4 {
   margin-right: 29px;
 }
 
+.sort:hover {
+  color: #81b3d2;
+}
+
+.sort:active {
+  color: #000000;
+  border: none;
+}
+
 .sort__active {
   color: #81b3d2;
   border-bottom: none;
@@ -620,7 +952,7 @@ h4 {
   font-size: 0;
 }
 
-.triangle1 {
+.triangle__up {
   display: inline-block;
   width: 0;
   height: 0;
@@ -630,12 +962,36 @@ h4 {
   margin-right: 15px;
 }
 
-.triangle2 {
+.triangle__up__active {
+  border-color: transparent transparent #81b3d2 transparent;
+}
+
+.triangle__up:hover {
+  border-color: transparent transparent #000000 transparent;
+}
+
+.triangle__up:active {
+  border-color: transparent transparent #81b3d2 transparent;
+}
+
+.triangle__down {
   display: inline-block;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 9px 5px 0 5px;
+  border-color: #cccccc transparent transparent transparent;
+}
+
+.triangle__down__active {
+  border-color: #81b3d2 transparent transparent transparent;
+}
+
+.triangle__down:hover {
+  border-color: #000000 transparent transparent transparent;
+}
+
+.triangle__down:active {
   border-color: #81b3d2 transparent transparent transparent;
 }
 
@@ -647,7 +1003,6 @@ h4 {
 
 .catalog ul h2 {
   margin: -3px;
-
 }
 
 .hotel__image {
@@ -665,7 +1020,9 @@ h4 {
 
 .hotel__info span {
   display: inline-block;
-  margin: 10px 35px 15px -3px;
+  margin: 10px 0 15px -3px;
+  min-width: 106px;
+  padding-right: 10px;
 }
 
 .buttons {
@@ -688,15 +1045,34 @@ h4 {
   background: #81b3d2;
 }
 
+.more:hover {
+  background: #669ec0;
+}
+
+.more:active {
+  background: #669ec0;
+  color: #94b9d2;
+}
+
 .book {
   background: #766357;
+}
+
+.book:hover {
+  background: #604e43;
+}
+
+.book:active {
+  background: #604e43;
+  color: #928a85;
 }
 
 .hotel__rating {
   float: right;
   width: 112px;
   min-height: 50px;
-  margin-right: 50px;
+  margin-right: 70px;
+  text-align: right;
 }
 
 .star {
@@ -729,7 +1105,6 @@ h4 {
   width: 82px;
   height: 11px;
   padding: 5px 16px;
-  left: -20px;
   top: 43px;
   background-color: #f2f2f2;
 }
@@ -752,8 +1127,22 @@ h4 {
   height: 90px;
 }
 
+.hotel__name {
+  color: #000000;
+  text-decoration: none;
+}
+
+.hotel__name:hover {
+  color: #81b3d2;
+}
+
+.hotel__name:active {
+  color: #cacaca;
+}
+
 .footer__relative {
   position: relative;
-  width: 1200px;
-  height: 126px;
+  min-height: 120px;
+  font-size: 0;
+  line-height: 0;
 }
