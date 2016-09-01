@@ -424,7 +424,7 @@ h4 {
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   background-position: -10px -10px;
-  opacity: 0.5;
+  opacity: 0.25;
   width: 21px;
   height: 22px;
   display: inline-block;
