@@ -381,7 +381,7 @@ h4 {
   width: 346px;
   margin: 0;
   margin-left: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding: 6px 12px;
   padding-right: 40px;
   font-size: 14px;
@@ -439,6 +439,7 @@ h4 {
 .icon__calendar:hover {
   opacity: 1;
 }
+
 .icon__calendar:active {
   opacity: 1;
   background-image: url("../img/sprite.png");
@@ -450,7 +451,7 @@ h4 {
   display: inline-block;
   float: left;
   vertical-align: middle;
-  margin-bottom: 42px;
+  margin-bottom: 44px;
 }
 
 .adults__kids__block2 {
@@ -463,12 +464,14 @@ h4 {
   display: inline-block;
   margin-right: 37px;
   vertical-align: middle;
+  padding-top: 9px;
 }
 
 .adults__kids__left2 {
   display: inline-block;
   margin-right: 23px;
   vertical-align: middle;
+  padding-top: 9px;
 }
 
 .adults__kids__btn {
