@@ -377,7 +377,8 @@ h4 {
 
 .input__container input[type="text"] {
   float: right;
-  width: 290px;
+  box-sizing: border-box;
+  width: 346px;
   margin: 0;
   margin-left: 15px;
   margin-bottom: 30px;
@@ -389,18 +390,18 @@ h4 {
   color: #000000;
   text-transform: uppercase;
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid #f2f2f2;
   outline: none;
 }
 
 .input__container input[type="text"]:hover {
   background-color: #ebebeb;
+  border: 2px solid #ebebeb;
 }
 
 .input__container input[type="text"]:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
-  padding: 4px 38px 4px 10px;
 }
 
 .modal__content fieldset {
@@ -427,12 +428,12 @@ h4 {
   width: 21px;
   height: 22px;
   display: inline-block;
-	vertical-align: top;
-	border: none;
-	outline: 0;
-	background-color: transparent;
+  vertical-align: top;
+  border: none;
+  outline: 0;
+  background-color: transparent;
   top: 8px;
-	right: 10px;
+  right: 10px;
 }
 
 .icon__calendar:hover {
@@ -449,7 +450,7 @@ h4 {
   display: inline-block;
   float: left;
   vertical-align: middle;
-  margin-bottom: 38px;
+  margin-bottom: 42px;
 }
 
 .adults__kids__block2 {
@@ -460,31 +461,33 @@ h4 {
 
 .adults__kids__left1 {
   display: inline-block;
-  margin-right: 45px;
-  padding-top: 8px;
+  margin-right: 37px;
+  vertical-align: middle;
 }
 
 .adults__kids__left2 {
   display: inline-block;
-  margin-right: 30px;
-  padding-top: 8px;
+  margin-right: 23px;
+  vertical-align: middle;
 }
 
 .adults__kids__btn {
-	font-size: 0;
+  font-size: 0;
   display: inline-block;
+  position: relative;
 }
 
 .adults__kids__btn input {
   display: inline-block;
   width: 38px;
   height: 38px;
-	font-size: 14px;
-	line-height: 26px;
-	vertical-align: middle;
+  font-size: 14px;
+  line-height: 26px;
+  vertical-align: bottom;
 }
 
-.adults__kids__btn input[type=button] {
+.btn__minus, .btn__plus {
+  position: relative;
 	width: 38px;
 	height: 38px;
 	margin: 0;
@@ -492,52 +495,73 @@ h4 {
 	border: none;
 	outline: none;
 	background-color: #f2f2f2;
+  border: 2px solid #f2f2f2;
 	font-size: 0;
 }
 
-.adults__kids__btn input[type=button]:hover {
-  background-color: #ebebeb;
+.btn__minus::after, .btn__plus::after {
+  width: 11px;
+  height: 11px;
+  content: '';
+  background: url("../img/sprite.png") no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
 }
 
-.adults__kids__btn input[type=text]:hover {
-  background-color: #ebebeb;
+.btn__minus::after {
+  background-position: -86px -48px;
 }
 
-.adults__kids__btn input[type="text"]:focus {
-  background-color: #ffffff;
-  border: 2px solid #e5e5e5;
-  width: 22px;
-  height: 25px;
+.btn__plus::after {
+  background-position: -10px -98px;
 }
 
-.adults__kids__btn .btn__minus,
-.adults__kids__btn .btn__plus {
-	background: url("../img/sprite.png") no-repeat top left;
+.btn__minus:hover::after {
+  background-position: -86px -48px;
+  opacity: 1;
 }
 
-.adults__kids__btn .btn__minus {
-	width: 12px;
-	height: 3px;
-	background-position: -86px -52px;
+.btn__plus:hover::after {
+  background-position: -10px -98px;
+  opacity: 1;
 }
 
-.adults__kids__btn .btn__plus {
-	width: 11px;
-	height: 11px;
-	background-position: -10px -98px;
+.btn__minus:active::after {
+  background-position: -86px -41px;
+  opacity: 1;
+}
+.btn__plus:active::after {
+  background-position: -41px -98px;
+  opacity: 1;
 }
 
 .adults__kids__btn input[type=text] {
-	width: 32px;
-	padding: 4px;
-	height: 30px;
-	text-align: center;
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  text-align: center;
   font-size: 14px;
   line-height: 26px;
   color: #000000;
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid #f2f2f2;
   outline: none;
+}
+
+.adults__kids__btn input[type=text]:hover {
+  background-color: #ebebeb;
+  border-color: #ebebeb;
+}
+
+.adults__kids__btn input[type="text"]:focus {
+  background-color: #ffffff;
+  border-color: #e5e5e5;
 }
 
 .find {
@@ -550,7 +574,7 @@ h4 {
   border: 0;
   text-decoration: none;
   max-width: 100%;
-  padding: 17px 135px;
+  padding: 16px 135px;
   text-align: center;
   background: #81b3d2;
   margin-right: auto;
@@ -746,43 +770,43 @@ h4 {
 
 .infrastructure input[type=checkbox],
 .house__type input[type=checkbox] {
-	display: none;
+  display: none;
 }
 
 .infrastructure input[type=checkbox]+label,
 .house__type input[type=checkbox]+label {
-	display: block;
-	position: relative;
-	padding: 12px 0;
-	padding-left: 35px;
-	color: #fff;
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: normal;
-	cursor: pointer;
+  display: block;
+  position: relative;
+  padding: 12px 0;
+  padding-left: 35px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  cursor: pointer;
 }
 
 .infrastructure input[type=checkbox]+label::before,
 .house__type input[type=checkbox]+label::before {
-	display: block;
-	position: absolute;
-	left: 0;
-	content: "";
-	width: 25px;
-	height: 25px;
-	background: url("../img/sprite.png") no-repeat -92px -10px;
-	cursor: pointer;
+  display: block;
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url("../img/sprite.png") no-repeat -92px -10px;
+  cursor: pointer;
 }
 
 .infrastructure input[type=checkbox]:checked+label::before,
 .house__type input[type=checkbox]:checked+label::before {
-	display: block;
-	position: absolute;
-	left: 0;
-	content: "";
-	width: 25px;
-	height: 22px;
-	background: url("../img/sprite.png") no-repeat -10px -52px;
+  display: block;
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 25px;
+  height: 22px;
+  background: url("../img/sprite.png") no-repeat -10px -52px;
 }
 
 .price__day {
