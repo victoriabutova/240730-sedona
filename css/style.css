@@ -159,17 +159,19 @@ h4 {
   width: 1200px;
   min-height: 432px;
   background: url("../img/background.jpg") no-repeat;
+  background-color: #7992a6;
   padding-top: 76px;
   margin-bottom: 60px;
   margin-top: 0;
+  position: relative;
 }
 
 .header__text {
-  width: 458px;
-  min-height: 350px;
-  background: url("../img/welcome.png") no-repeat;
-  margin: auto;
-
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .white__shape {
@@ -178,6 +180,8 @@ h4 {
   background: url("../img/white__shape.png") no-repeat;
   margin: auto;
   margin-top: 25px;
+  position: absolute;
+  bottom: 0;
 }
 
 .description {
@@ -385,7 +389,6 @@ h4 {
   padding: 6px 12px;
   padding-right: 40px;
   font-size: 14px;
-  line-height: 26px;
   font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
   text-transform: uppercase;
@@ -485,7 +488,6 @@ h4 {
   width: 38px;
   height: 38px;
   font-size: 14px;
-  line-height: 26px;
   vertical-align: bottom;
 }
 
